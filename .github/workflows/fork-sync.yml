@@ -9,10 +9,16 @@ on:
 #  workflow_dispatch: # on button click
 
 jobs:
-  sync:
-
+  repo-sync:
     runs-on: ubuntu-latest
-
     steps:
-      - name: fork-sync
-        run: echo fork-sync
+    - uses: actions/checkout@v4
+      with:
+        persist-credentials: false
+    - name: repo-sync
+      uses: repo-sync/github-sync@v2
+      with:
+        source_repo: "splunk/public-o11y-docs"
+        source_branch: "main"
+        destination_branch: "main"
+        #github_token: ${{ secrets.PAT }}
