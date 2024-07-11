@@ -1,12 +1,12 @@
 name: Fork Sync
 
 on:
-#  push:
-#    branches:
-#      - pj-actions-fork-sync   
+  push:
+    branches:
+      - pj-actions-fork-sync   
 #  schedule:
 #    - cron: '*/5 * * * *' # every 5 minutes
-  workflow_dispatch: # on button click
+#  workflow_dispatch: # on button click
 
 jobs:
   repo-sync:
