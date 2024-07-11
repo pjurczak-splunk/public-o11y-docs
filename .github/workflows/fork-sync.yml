@@ -20,5 +20,5 @@ jobs:
       with:
         source_repo: "splunk/public-o11y-docs"
         source_branch: "main"
-        destination_branch: "main"
-        #github_token: ${{ secrets.PAT }}
+        destination_branch: "pj-actions-fork-sync"
+        github_token: ${{ secrets.GITHUB_TOKEN }}
